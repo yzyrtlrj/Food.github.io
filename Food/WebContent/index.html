@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script type="text/javascript">
+			
+			var caidan = ['面包牛奶', '麻辣烫', '麻辣拌', '鱿鱼盖饭', '辣炒蚬子', '扇贝生蚝', '烤冷面', '手抓饼', '鱼香鸡蛋盖饭', '肉酱米线', '各种米线', '麻辣香锅', '汉堡包', '麦当劳', '烤串', '绝味鸭脖', '武汉热干面', '凉皮牛筋面', '小米粥包子', '再来一次', '炸鸡', '烤肉拌饭', 'QQ鸡架', '披萨', '水果捞', '肉夹馍', '煎饼果子', '鸡蛋灌饼'];
+			var i = 0;
+			var time;
+			function start(){
+					time = setInterval(function(){
+						if(i == caidan.length){
+								i = 0;
+							}
+						$('#h2i').text(caidan[i]);
+						i++;
+						
+						}, 50)
+				}
+			function stop(){
+					clearInterval(time);
+				}
+			
+			function f(){
+				if($('#bt1').attr('value') == '开始'){
+						$('#bt1').attr('value', '停！');
+						start();
+					}else{
+						$('#bt1').attr('value', '开始');
+						stop();
+						}
+						
+			}
+		</script>
+	</head>
+	<body class="landing">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>猪猪彬专用午饭选择器</h2><br/>
+							<h2 id="h2i"> </h2>
+							<ul class="actions">
+								<li><input id="bt1" type="button" class="button special" value="开始" onclick="f();" /></li>
+							</ul>
+						</div>
+					</section>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
